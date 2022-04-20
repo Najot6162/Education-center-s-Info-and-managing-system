@@ -57,7 +57,7 @@
             </button>
 
             <a class="navbar-brand" href="#" >
-                <img src="{{ asset('images/logo.png') }}" alt="image">
+                <img src="{{ asset('images/logo_younine.jpg') }}" alt="image">
             </a>
         </div>
 

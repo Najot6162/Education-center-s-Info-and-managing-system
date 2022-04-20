@@ -41,7 +41,6 @@ class PostController extends Controller
             'name' => 'required',
             'email' => 'required|unique:posts',
             'subject' => 'required',
-            'message' => 'required',
             'phone' => 'required|unique:posts',
         ],[
             'name.required' => 'Name is required',
@@ -57,7 +56,7 @@ class PostController extends Controller
         $post->phone=$request->phone;
         $post->save();
 
-        return view('admin/admin-event')
+        return view('pages/home')
             ->with('success','Post has been created successfully.');
 
     }
@@ -99,14 +98,15 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Post   $post
      * @return \Illuminate\Http\Response
      */
     public function destroy(Post $post)
     {
         $post->delete();
 
-        return view('admin/admin-event')
-            ->with('success','Student has been deleted successfully.');
+        return redirect()->route('posts.index')
+            ->with('success','Post has been deleted successfully');
+
     }
 }

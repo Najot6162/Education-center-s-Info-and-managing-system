@@ -78,9 +78,6 @@
                                 <div class="form-group">
                                     <label for="message">Xabar</label>
                                     <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
-                                    @if ($errors->has('message'))
-                                        <span class="text-danger">{{ $errors->first('message') }}</span>
-                                    @endif
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Telefon raqam</label>
