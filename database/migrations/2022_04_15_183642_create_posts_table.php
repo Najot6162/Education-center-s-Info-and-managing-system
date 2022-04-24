@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('subject');
-            $table->string('message');
+            $table->string('message')->nullable();
             $table->string('phone')->unique();
             $table->timestamps();
         });
