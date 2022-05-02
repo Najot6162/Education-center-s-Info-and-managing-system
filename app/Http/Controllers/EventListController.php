@@ -13,11 +13,12 @@ class EventListController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data['eventlists'] = EventList::orderBy('id','asc')->paginate(5);
-
-        return view('eventlists.index', $data);
+        $search = $request['search']??"";
+        $data['eventlists'] = EventList::orderBy('id','asc')->where('event_name', 'LIKE', "%$search%")->paginate(5);
+        $data1['search'] = $search;
+        return view('eventlists.index', $data, $data1);
     }
 
     /**

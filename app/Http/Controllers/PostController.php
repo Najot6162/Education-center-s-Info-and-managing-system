@@ -12,11 +12,14 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data['posts'] = Post::orderBy('id','asc')->paginate(5);
+        $search = $request['search']??"";
+        $data['posts'] = Post::orderBy('id','asc')->where('name','LIKE',"%$search%")->orWhere('email','LIKE',"%$search%")->paginate(5);
 
-        return view('admin/admin-event', $data);
+        $data1['search'] = $search;
+
+        return view('admin/admin-event', $data, $data1);
     }
 
     /**

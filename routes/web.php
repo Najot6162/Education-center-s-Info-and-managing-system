@@ -22,23 +22,25 @@ use \App\Http\Controllers\TeachController;
 */
 
 Auth::routes();
+Route::group(['middleware' => ['auth:sanctum']],function () {
+    Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+    Route::get('home', [HomeController::class, 'index'])->name('home');
+    Route::resource('posts', PostController::class);
+    Route::resource('courses', CourseController::class);
+    Route::resource('futures', FutureController::class);
+    Route::resource('teachs', \App\Http\Controllers\TeachersController::class);
+    Route::resource('event', \App\Http\Controllers\EventController::class);
+    Route::resource('eventlist', \App\Http\Controllers\EventListController::class);
+    Route::get('/home', [PostController::class, 'index'])->name('home');
+    Route::post('/logout',);
 
-Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
-Route::get('home', [HomeController::class, 'index'])->name('home');
+});
+
+Route::get('index', [CoursesController::class, 'index'])->name('index');
+Route::get('future-event', [EventsController::class, 'index'])->name('future-event');
+Route::get('teach', [TeachController::class, 'index'])->name('teach');
 
 
-Route::resource('posts', PostController::class);
-Route::resource('courses', CourseController::class);
-Route::resource('futures', FutureController::class);
-Route::resource('teachs',\App\Http\Controllers\TeachersController::class);
-Route::resource('event',\App\Http\Controllers\EventController::class);
-Route::resource('eventlist',\App\Http\Controllers\EventListController::class);
-
-Route::get('index',[CoursesController::class, 'index'])->name('index');
-Route::get('future-event',[EventsController::class,'index'])->name('future-event');
-Route::get('teach',[TeachController::class,'index'])->name('teach');
-
-Route::post('/logout',);
 
 Route::get('/', function () {
     return view('/pages/home');
@@ -73,8 +75,8 @@ Route::get('/contact', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

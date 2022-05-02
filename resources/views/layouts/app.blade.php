@@ -26,6 +26,7 @@
         padding: 0;
         overflow: hidden;
         background-color: #FFFFFF;
+        margin-left: -15px;
     }
 
     li {
@@ -50,7 +51,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img src="{{ asset('images/logo_younine.jpg') }}" alt="image">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -106,12 +107,12 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <ul class="ull">
-                            <li><a class="active aa"  href="{{ route('posts.index') }}">Talabalar</a></li>
-                            <li><a class="aa" href="{{ route('courses.index') }}">Kurslar</a></li>
-                            <li><a class="aa" href="{{ route('futures.index') }}">Kutilayotgan kurslar</a></li>
-                            <li><a class="aa" href="{{route('teachs.index')}}">O'qituvchilar</a></li>
-                            <li><a class="aa" href="{{route('event.index')}}">Jarayonlar</a></li>
-                            <li><a class="aa" href="{{route('eventlist.index')}}">Jarayonlar ro'yxati</a></li>
+                            <li><a class="active aa"  href="{{ route('posts.index') }}">Students</a></li>
+                            <li><a class="aa" href="{{ route('courses.index') }}">Courses</a></li>
+                            <li><a class="aa" href="{{ route('futures.index') }}">Upcoming courses</a></li>
+                            <li><a class="aa" href="{{route('teachs.index')}}">Teachers</a></li>
+                            <li><a class="aa" href="{{route('event.index')}}">Events</a></li>
+                            <li><a class="aa" href="{{route('eventlist.index')}}">Event List</a></li>
                         </ul>
                     </div>
 

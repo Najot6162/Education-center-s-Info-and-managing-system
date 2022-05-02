@@ -12,11 +12,12 @@ class CourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data['courses'] = Course::orderBy('id','asc')->paginate(5);
-
-        return view('courses.index', $data);
+        $search = $request['search']??"";
+        $data['courses'] = Course::orderBy('id','asc')->where('course_name','LIKE',"%$search%")->paginate(5);
+        $data1['search'] = $search;
+        return view('courses.index', $data, $data1);
     }
 
     /**

@@ -12,11 +12,12 @@ class FutureController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data['futures'] = Future::orderBy('id','asc')->paginate(5);
-
-        return view('futures.index', $data);
+        $search = $request['search']??"";
+        $data['futures'] = Future::orderBy('id','asc')->where('course_name', 'LIKE', "%$search%")->paginate(5);
+        $data1['search'] = $search;
+        return view('futures.index', $data, $data1);
     }
 
     /**
