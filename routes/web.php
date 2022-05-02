@@ -33,7 +33,8 @@ Route::group(['middleware' => ['auth:sanctum']],function () {
     Route::resource('eventlist', \App\Http\Controllers\EventListController::class);
     Route::get('/home', [PostController::class, 'index'])->name('home');
     Route::post('/logout',);
-
+    Route::put('update', [\App\Http\Controllers\ProfileController::class,'update'])->name('profile.update');
+    Route::get('edit', [\App\Http\Controllers\ProfileController::class,'edit'])->name('profile.edit');
 });
 
 Route::get('index', [CoursesController::class, 'index'])->name('index');
