@@ -6,7 +6,7 @@
         <!-- Fixed navbar -->
         <section class="flexslider">
             <ul class="slides">
-                <li style="background-image:url('{{ asset('images/life1.jpg')}}');" class="overlay">
+                <li style="background-image:url('{{ asset('images/z2.jpg')}}');" class="overlay">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 </li>
-                <li style="background-image:url('{{ asset('images/life2.jpg')}}');" class="overlay">
+                <li style="background-image:url('{{ asset('images/z5.jpg')}}');" class="overlay">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
@@ -29,7 +29,7 @@
                     </div>
 
                 </li>
-                <li style="background-image:url('{{ asset('images/life1.jpg')}}');" class="overlay">
+                <li style="background-image:url('{{ asset('images/z4.jpg')}}');" class="overlay">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
@@ -64,7 +64,7 @@
                                 <p>Yillar davomida o‘quv markazimizda o‘ziga xos qoidalar va an’analar ishlab chiqildi. Biz har doim talabalar bilan muloqot qilishga tayyormiz. Sizni qiziqtirgan har qanday savol yoki muammolarni biz bilan baham ko'rishingiz mumkin va biz siz bilan birgalikda yechim topamiz.</p>
 {{--                                <p><a href="#" class="btn btn-primary">Learn More</a></p>--}}
                             </div>
-                            <div class="probootstrap-image probootstrap-animate" style="background-image:url('{{ asset('images/life1.jpg')}}');">
+                            <div class="probootstrap-image probootstrap-animate" style="background-image:url('{{ asset('images/z1.jpg')}}');">
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
             </div>
         </section>
 
-        <section class="probootstrap-section" id="probootstrap-counter">
+        <!-- <section class="probootstrap-section" id="probootstrap-counter">
             <div class="container">
 
                 <div class="row">
@@ -85,7 +85,7 @@
                   <span class="probootstrap-counter">
                     <span class="js-counter" data-from="0" data-to="1200" data-speed="5000" data-refresh-interval="50">1</span>
                   </span>
-                                <span class="probootstrap-counter-label">Ro'yxatga olingan talabar</span>
+                                <span class="probootstrap-counter-label">Ro'yxatga olingan talabalar</span>
                             </div>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="probootstrap-section probootstrap-section-colored probootstrap-bg probootstrap-custom-heading probootstrap-tab-section" style="background-image: url(img/slider_2.jpg)">
             <div class="container">

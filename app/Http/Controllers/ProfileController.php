@@ -35,8 +35,5 @@ class ProfileController extends Controller
         }else{
             return redirect()->back()->with('message','Old password does not matched');;
         }
-
-
-
     }
 }
