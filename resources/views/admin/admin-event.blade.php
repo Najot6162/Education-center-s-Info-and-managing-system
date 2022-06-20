@@ -32,7 +32,9 @@
         <th width="180px">Subject</th>
         <th width="180px">Message</th>
         <th width="180px">Phone</th>
-        <th width="180px">Action</th>
+        <th width="200px">Date</th>
+        <th width="80px">Action</th>
+      
     </tr>
     @php
         $i = 1;
@@ -45,6 +47,7 @@
             <td>{{ $post->subject }}</td>
             <td>{{ $post->message }}</td>
             <td>{{$post->phone}}</td>
+            <td>{{$post->created_at}}</td>
             <td>
                 <form action="{{ route('posts.destroy',$post->id) }}" method="POST">
 

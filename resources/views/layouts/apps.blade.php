@@ -11,14 +11,14 @@
     <link href="{{ asset('css/styles-merged.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-    <link href="{{ asset('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans') }}" rel="stylesheet">
-    <title>uiCookies:YouNine</title>
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <link href="{{ asset('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans') }}"
+          rel="stylesheet">
+    <title>YouNine</title>
 </head>
 <style>
-.afont:hover{
-    color: #4AD292!important;
-}
+    .afont:hover {
+        color: #4AD292 !important;
+    }
 
 </style>
 <body>
@@ -49,14 +49,15 @@
             <div class="btn-more js-btn-more visible-xs">
                 <a href="#"><i class="icon-dots-three-vertical "></i></a>
             </div>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+                    aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#" >
+            <a class="navbar-brand" href="#">
                 <img src="{{ asset('images/logo_younine.jpg') }}" alt="image">
             </a>
         </div>
@@ -64,7 +65,7 @@
         <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="afont" href="/">Asosiy</a></li>
-                <li><a class="afont"  href="{{ route('index') }}" >Kurslar</a></li>
+                <li><a class="afont" href="{{ route('index') }}">Kurslar</a></li>
                 <li><a class="afont" href="{{route('teach')}}">O'qituvchilar</a></li>
                 <li><a class="afont" href="{{route('future-event')}}">Jarayonlar</a></li>
                 <li><a class="afont" href="/contact">Aloqa</a></li>
@@ -82,7 +83,8 @@
             <div class="col-md-4">
                 <div class="probootstrap-footer-widget">
                     <h3>O'quv markazimiz haqida</h3>
-                    <p>YouNine O‘quv markazi - Eng zamonaviy ta'lim texnologiyalari bilan faoliyat olib boruvchi innovatsion o'quv markaz.</p>
+                    <p>YouNine O‘quv markazi - Eng zamonaviy ta'lim texnologiyalari bilan faoliyat olib boruvchi
+                        innovatsion o'quv markaz.</p>
                     <h3>Ijtimoiy tarmoqlar</h3>
                     <ul class="probootstrap-footer-social">
                         <li><a href="#"><i class="icon-twitter"></i></a></li>
@@ -100,8 +102,8 @@
                     <ul>
                         <li class="active"><a href="/">Asosiy</a></li>
                         <li><a href="{{ route('index') }}">Kurslar</a></li>
-                        <li><a  href="{{route('teach')}}">O'qituvchilar</a></li>
-                        <li><a  href="{{route('future-event')}}">Jarayonlar</a></li>
+                        <li><a href="{{route('teach')}}">O'qituvchilar</a></li>
+                        <li><a href="{{route('future-event')}}">Jarayonlar</a></li>
                         <li><a href="/contact">Aloqa</a></li>
                     </ul>
                 </div>
@@ -110,7 +112,8 @@
                 <div class="probootstrap-footer-widget">
                     <h3>Malumot</h3>
                     <ul class="probootstrap-contact-info">
-                        <li><i class="icon-location2"></i> <span>Farg'ona viloyati Tojimahal binosi qarshisida</span></li>
+                        <li><i class="icon-location2"></i> <span>Farg'ona viloyati Tojimahal binosi qarshisida</span>
+                        </li>
                         <li><i class="icon-mail"></i><span>younine2gmail.com</span></li>
                         <li><i class="icon-phone2"></i><span>+998 90 123 45 67</span></li>
                     </ul>
@@ -126,7 +129,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 text-left">
-                    <p>&copy; 2022 <a href="#">YouNine</a>  Developed by Biloliddin <i class="icon icon-heart"></i> <a href="https://t.me/biloliddin_abduqahhorov">@biloliddin_abduqahhorov</a></p>
+                    <p>&copy; 2022 <a href="#">YouNine</a> Developed by Biloliddin <i class="icon icon-heart"></i> <a
+                            href="https://t.me/biloliddin_abduqahhorov">@biloliddin_abduqahhorov</a></p>
                 </div>
                 <div class="col-md-4 probootstrap-back-to-top">
                     <p><a href="#" class="js-backtotop">Yuqoriga <i class="icon-arrow-long-up"></i></a></p>

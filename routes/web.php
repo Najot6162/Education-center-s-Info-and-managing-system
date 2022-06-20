@@ -10,6 +10,7 @@ use \App\Http\Controllers\FutureController;
 use \App\Http\Controllers\TeacherController;
 use \App\Http\Controllers\EventsController;
 use \App\Http\Controllers\TeachController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +23,7 @@ use \App\Http\Controllers\TeachController;
 */
 
 Auth::routes();
-Route::group(['middleware' => ['auth:sanctum']],function () {
+Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
     Route::get('home', [HomeController::class, 'index'])->name('home');
     Route::resource('posts', PostController::class);
@@ -33,14 +34,14 @@ Route::group(['middleware' => ['auth:sanctum']],function () {
     Route::resource('eventlist', \App\Http\Controllers\EventListController::class);
     Route::get('/home', [PostController::class, 'index'])->name('home');
     Route::post('/logout',);
-    Route::put('update', [\App\Http\Controllers\ProfileController::class,'update'])->name('profile.update');
-    Route::get('edit', [\App\Http\Controllers\ProfileController::class,'edit'])->name('profile.edit');
+    Route::put('update', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+    Route::get('edit', [\App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
 });
 
 Route::get('index', [CoursesController::class, 'index'])->name('index');
 Route::get('future-event', [EventsController::class, 'index'])->name('future-event');
 Route::get('teach', [TeachController::class, 'index'])->name('teach');
-
+Route::post('store', [PostController::class, 'store'])->name('posts.store');
 
 
 Route::get('/', function () {
@@ -69,13 +70,11 @@ Route::get('/contact', function () {
 });
 
 
-
 //Auth::routes();
 //
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
-
 
 
 Auth::routes();
