@@ -16,17 +16,10 @@ class CreateUsersSeeder extends Seeder
     {
         $user = [
             [
-                'name' => 'Admin',
-                'email' => 'admin@onlinewebtutorblog.com',
-                'is_admin' => '1',
-                'password' => bcrypt('123456'),
-            ],
-            [
-                'name' => 'User',
-                'email' => 'normal@onlinewebtutorblog.com',
-                'is_admin' => '0',
-                'password' => bcrypt('123456'),
-            ],
+                'name' => 'admin',
+                'email' => 'admin@gmail.com',
+                'password' => bcrypt('admin123'),
+            ]
         ];
 
         foreach ($user as $key => $value) {

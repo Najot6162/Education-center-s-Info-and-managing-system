@@ -60,4 +60,16 @@
                 </div>
             </div>
         </section>
+
+        <section class="probootstrap-cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="probootstrap-animate" data-animate-effect="fadeInRight">Hoziroq ro'yxatdan o'ting!</h2>
+                    <a href="/contact" role="button" class="btn btn-primary btn-lg btn-ghost probootstrap-animate" data-animate-effect="fadeInLeft">Ro'yxatda o'tish</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 @endsection
