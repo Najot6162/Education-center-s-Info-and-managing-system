@@ -1,3 +1,4 @@
+This project created for education center and provides brief information about the education center
 How to use project
 1.cp .env.example .env
 2.configuration database
